@@ -1,0 +1,361 @@
+header {
+	display: block;
+}
+
+.link:visited {
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: none;
+	color: yellow;
+}
+
+.link:active {
+	text-decoration: none;
+}
+
+.site-header {
+	width: 100%;
+	min-width: 980px;
+	height: 80px;
+	background-color: #00bcd4; 
+	z-index: 9999;
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.5);
+	box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.header-content {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 6px;
+
+}
+
+.logo{
+	float: left;
+	background-image: url("../images/creotistLogo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 70px;
+	position: relative;
+	top: -2px;
+}
+
+.login-form {
+	width: 500px;
+	height: 60px;
+	float: right;
+}
+
+.login-list {
+	width: 520px;
+	height: 60px;
+	list-style: none;
+	float: right;
+}
+
+.login-list-element {
+	float: right;
+	margin-left: 10px;
+}
+
+.login-labels {
+	margin-bottom: 0px;
+	color: white;
+	font-size: 12px;
+}
+
+.login-input-field {
+	width: 190px;
+	border-radius: 2px;
+	padding: 3px 0px 3px 3px;
+	font-size: 12px;
+	border: 1px solid #00bcd4;
+}
+
+.login-input-field:focus {
+	border: 1px solid #ffeb3b;
+	box-shadow: 0 0 5px #ffeb3b;
+	outline: 0 none;
+}
+
+.remember-me-checkbox {
+	position: relative;
+}
+
+.remember-me-label {
+	position: relative;
+	top: -2px;
+	color: white;
+	font-size: 11px;
+	font-weight: lighter;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.forgot-password {
+	color: white;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.login-button {
+	width: 60px;
+	height: 24px;
+	position: relative;
+	top: 20px;
+	background-color: #00838f;
+	border-radius: 5px;
+	color: white;
+	font-size: 12px;
+	border: 1px solid #006064;
+}
+
+.login-button:visited{
+	background-color: #006064;
+}
+
+.login-button:hover{
+	background-color: #006064;
+}
+
+.login-button:active{
+	background-color: #006064;
+}
+
+.body {
+	width: 100%;
+	min-width: 980px;
+	height: 667px;
+}
+
+.body-content {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.signup-form {
+	width: 400px;
+	height: 600px;
+	float: right;
+	position: relative;
+	top: 150px;
+}
+
+.signup-form-legend {
+	font-size: 24px;
+	color: #607d8b;
+}
+
+.signup-field {
+	padding-bottom: 20px;
+}
+
+.signup-input-field {
+	width: 100%;
+	border: 1px solid #b0bec5;
+	border-radius: 4px;
+	padding: 5px;
+	font-size: 16px;
+}
+
+.signup-input-field:focus {
+	border: 1px solid #4dd0e1;
+	box-shadow: 0 0 10px #4dd0e1;
+	outline: 0 none;
+}
+
+.policy-message {
+	color: #607d8b;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+.policy-link {
+	color: #0066FF;
+}
+
+.policy-link:visited {
+	color: #0066FF;
+}
+
+.policy-link:hover {
+	color: #0066FF;
+}
+
+.policy-link:active {
+	color: #0066FF;
+}
+
+.sign-up-button {
+	width: 200px;
+	height: 40px;
+	background-color: #00838f;
+	border-radius: 5px;
+	float: left;
+	color: white;
+	border: 1px solid #006064;
+}
+
+.sign-up-button:visited{
+	background-color: #006064;
+}
+
+.sign-up-button:hover{
+	background-color: #006064;
+}
+
+.sign-up-button:active{
+	background-color: #006064;
+}
+
+.main-about {
+	width: 400px;
+	float: left;
+	position: relative;
+	top: 144px;
+	color: #37474f;
+	font-size: 32px;
+}
+
+.sub-about{
+	width: 400px;
+	float: left;
+	position: relative;
+	top: 160px;
+	color: #607d8b;
+	font-size: 21px;
+}
+
+.profile-logo{
+	/*width: 20%;*/
+	position: relative;
+	top: 18px;
+	float: left;
+	margin-left: 1%;
+	color: white;
+	font-size: 14px;
+	font-family: Georgia, Times, serif;
+	letter-spacing: 0.1em;
+}
+
+.notifications {
+	position: relative;
+	top: 18px;
+	float: left;
+	margin-left: 5%;
+	color: white;
+	font-size: 14px;
+	/*font-family: Georgia, Times, serif;
+	letter-spacing: 0.1em;*/
+}
+
+.messages {
+	position: relative;
+	top: 18px;
+	float: left;
+	margin-left: 3%;
+	color: white;
+	font-size: 14px;
+	/*font-family: Georgia, Times, serif;
+	letter-spacing: 0.1em;*/
+}
+
+.search-box {
+	width: 12%;
+	position: relative;
+	top: 18px;
+	float: left;
+	margin-left: 3%;
+	border-radius: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	font-size: 12px;
+}
+
+.profile {
+	position: relative;
+	top: 18px;
+	float: right;
+	margin-right: 3%;
+	color: white;
+	font-size: 14px;
+	/*font-family: Georgia, Times, serif;
+	letter-spacing: 0.1em;*/
+}
+
+.settings {
+	position: relative;
+	top: 18px;
+	float: right;
+	margin-right: 3%;
+	color: white;
+	font-size: 14px;
+	/*font-family: Georgia, Times, serif;
+	letter-spacing: 0.1em;*/
+}
+
+.log-out {
+	position: relative;
+	top: 18px;
+	float: right;
+	margin-right: 1%;
+	color: white;
+	font-size: 14px;
+	/*font-family: Georgia, Times, serif;
+	letter-spacing: 0.1em;*/
+}
+
+.profile-background {
+	width: 100%;
+	min-width: 800px;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.profile-pic {
+	width: 24%;
+	height: 320px;
+	float: left;
+	position: relative;
+	top: 30px;
+	border: 1px solid lightgreen;
+}
+
+.bio {
+	width: 46%;
+	/*min-width: 340px;*/
+	height: 320px;
+	border: 1px solid red;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+	position: relative;
+	top: 30px;
+}
+
+.news-feed {
+	width: 26%;
+	/*min-width: 200px;*/
+	height: 560px;
+	float: right;
+	/*margin-right: 1%;*/
+	position: relative;
+	color: rgb(0, 159, 199);
+	border: 1px solid lightgreen;
+}
+
+.profile-details {
+	width: 24%;
+	height: 210px;
+	float: left;
+	position: relative;
+	clear: left;
+	top: 60px;
+	margin-left: 1%;
+	color: #064D61;
+	font-size: 12px;
+	border: 1px solid lightgreen;
+}

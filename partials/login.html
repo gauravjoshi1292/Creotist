@@ -1,0 +1,77 @@
+<div class="site-header">
+	<div class="header-content">
+		<span>
+			<a href="" class="logo link"></a>
+		</span>
+
+		<span class="login-form">
+			<form action="../javascript/login.js" method="post">
+				<ul class="login-list">
+					<li class="login-list-element">
+						<input type="submit" name="login" value="Sign In" class="login-button">
+					</li>
+
+					<li class="login-list-element">
+						<label for="password" class="login-labels">Password</label>
+						<div>
+							<input id="password" type="password" name="password" required="required" class="login-input-field" placeholder="Password">
+						</div>
+						<div>
+							<a href="" class="forgot-password link">Forgot password?</a>
+						</div>
+					</li>
+
+					<li class="login-list-element">
+						<label for="email" class="login-labels">Email</label>
+						<div>
+							<input id="email" type="email" name="email" required="required" class="login-input-field" placeholder="Email">
+						</div>
+						<div>
+							<input type="checkbox" id="remember-me" name="remember-me" value="true" class="remember-me-checkbox">
+							<label for="remember-me" class="remember-me-label">Remember me</label>
+						</div>
+					</li>
+				</ul>
+			</form>
+		</span>
+	</div>
+</div>
+
+<div class="body">
+	<div class="body-content">
+		<fieldset class="signup-form" ng-controller="SignupCtrl" >
+			<p class="signup-form-legend">New to creotist? Join today.</p>
+
+			<form action="../javascript/signup.js" method="post">
+				<div class="signup-field">
+					<input id="fullName" type="text" name="fullName" required="required" class="signup-input-field" placeholder="Full name" ng-model="signupValues.fullName">
+				</div>
+				
+				<div class="signup-field">
+					<input id="email" type="email" name="email" required="required" class="signup-input-field" placeholder="Email" ng-model=" signupValues.email">
+				</div>
+				
+				<div class="signup-field">
+					<input id="password" type="password" name="password" required="required" class="signup-input-field" placeholder="Password (6 or more characters)" ng-model="signupValues.password" ng-minlength="5">
+				</div>
+
+				<div class="policy-message">
+					<p>By clicking Sign Up, you agree to Creotist's <a href="" class="policy-link">User Agreement</a>,<br /> <a href="" class="policy-link">Privacy Policy</a> and <a href="" class="policy-link">Cookie Policy</a>.</p>
+				</div>
+
+				<div>
+					<input type="submit" name="sign-up" value="Sign Up" class="sign-up-button">
+				</div>
+			</form>
+			<div>{{signupValues.fullName}}</div>
+		</fieldset>
+
+		<div class="main-about">
+			A platform for creative people
+		</div>
+
+		<div class="sub-about">
+			Meet creative people from around the world, share your work, get advice from the experts and follow your interests.
+		</div>
+	</div>
+</div>
