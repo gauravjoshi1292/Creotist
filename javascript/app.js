@@ -10,9 +10,17 @@ app.config(function($routeProvider, $locationProvider){
 		});
 });
 
+app.controller("LoginCtrl", function($scope){
+	$scope.formValues = {};
+})
 
 app.controller('SignupCtrl', function($scope){
-	$scope.signupValues = {};
-	$scope.signupValues.fullName = "";
-	console.log($scope.signupValues.fullName);
+	$scope.formValues = {};
+	$scope.formValues.isInValidFirstName = 'false';
+	$scope.checkIfFirstNameIsInValid = function(ngModelController){
+		if(ngModelController.$pristine){
+			$scope.formValues.isInValidFirstName = 'true';
+		}
+	}
+	// console.log($scope.signupValues.fullName);
 })

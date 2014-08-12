@@ -167,6 +167,14 @@ header {
 	outline: 0 none;
 }
 
+.signup-input-field-invalid {
+	border: 1px solid red;
+}
+
+.name {
+	width: 49.5%;
+}
+
 .policy-message {
 	color: #607d8b;
 	font-size: 12px;

@@ -4,7 +4,7 @@
 			<a href="" class="logo link"></a>
 		</span>
 
-		<span class="login-form">
+		<span class="login-form" ng-controller="LoginCtrl">
 			<form action="../javascript/login.js" method="post">
 				<ul class="login-list">
 					<li class="login-list-element">
@@ -27,7 +27,7 @@
 							<input id="email" type="email" name="email" required="required" class="login-input-field" placeholder="Email">
 						</div>
 						<div>
-							<input type="checkbox" id="remember-me" name="remember-me" value="true" class="remember-me-checkbox">
+							<input type="checkbox" id="remember-me" name="remember-me" value="true" class="remember-me-checkbox" ng-model="formValues.rememberMe">
 							<label for="remember-me" class="remember-me-label">Remember me</label>
 						</div>
 					</li>
@@ -44,15 +44,19 @@
 
 			<form action="../javascript/signup.js" method="post">
 				<div class="signup-field">
-					<input id="fullName" type="text" name="fullName" required="required" class="signup-input-field" placeholder="Full name" ng-model="signupValues.fullName">
+					<input id="firstName" type="text" name="firstName" required="required" class="signup-input-field name"
+					 ng-class="{'signup-input-field-invalid': formValues.isInValidFirstName}" placeholder="First name" ng-model="formValues.firstName">
+					<input id="lastName" type="text" name="lastName" required="required" class="signup-input-field name" placeholder="Last name"
+					 ng-model="formValues.lastName">
 				</div>
 				
 				<div class="signup-field">
-					<input id="email" type="email" name="email" required="required" class="signup-input-field" placeholder="Email" ng-model=" signupValues.email">
+					<input id="email" type="email" name="email" required="required" class="signup-input-field" placeholder="Email" ng-model="formValues.email">
 				</div>
 				
 				<div class="signup-field">
-					<input id="password" type="password" name="password" required="required" class="signup-input-field" placeholder="Password (6 or more characters)" ng-model="signupValues.password" ng-minlength="5">
+					<input id="password" type="password" name="password" required="required" class="signup-input-field"
+					 placeholder="Password (6 or more characters)" ng-model="formValues.password" ng-minlength="5">
 				</div>
 
 				<div class="policy-message">
@@ -63,7 +67,7 @@
 					<input type="submit" name="sign-up" value="Sign Up" class="sign-up-button">
 				</div>
 			</form>
-			<div>{{signupValues.fullName}}</div>
+			<div><p>{{formValues.firstName}}</p><p>{{formValues.lastName}}</p><p>{{formValues.email}}</p><p>{{formValues.password}}</p></div>
 		</fieldset>
 
 		<div class="main-about">
