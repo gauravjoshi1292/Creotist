@@ -15,12 +15,5 @@ app.controller("LoginCtrl", function($scope){
 })
 
 app.controller('SignupCtrl', function($scope){
-	$scope.formValues = {};
-	$scope.formValues.isInValidFirstName = 'false';
-	$scope.checkIfFirstNameIsInValid = function(ngModelController){
-		if(ngModelController.$pristine){
-			$scope.formValues.isInValidFirstName = 'true';
-		}
-	}
-	// console.log($scope.signupValues.fullName);
+	$scope.formValues = {};	
 })

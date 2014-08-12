@@ -42,21 +42,25 @@
 		<fieldset class="signup-form" ng-controller="SignupCtrl" >
 			<p class="signup-form-legend">New to creotist? Join today.</p>
 
-			<form action="../javascript/signup.js" method="post">
+			<form action="../javascript/signup.js" method="post" name="signupForm" novalidate>
 				<div class="signup-field">
-					<input id="firstName" type="text" name="firstName" required="required" class="signup-input-field name"
-					 ng-class="{'signup-input-field-invalid': formValues.isInValidFirstName}" placeholder="First name" ng-model="formValues.firstName">
-					<input id="lastName" type="text" name="lastName" required="required" class="signup-input-field name" placeholder="Last name"
-					 ng-model="formValues.lastName">
+					<input id="firstName" type="text" name="firstName" required class="signup-input-field name" placeholder="First name"
+					 ng-model="formValues.firstName">
+
+					<input id="lastName" type="text" name="lastName" required class="signup-input-field name" placeholder="Last name"
+					 ng-model="lastName">
+					<p ng-show="signupForm.lastName.$invalid" class="signup-input-field-invalid">Your name is your identity. We need it!</p>
 				</div>
 				
 				<div class="signup-field">
-					<input id="email" type="email" name="email" required="required" class="signup-input-field" placeholder="Email" ng-model="formValues.email">
+					<input id="email" type="email" name="email" required class="signup-input-field" placeholder="Email" ng-model="formValues.email">
+					<p ng-show="signupForm.email.$invalid" class="signup-input-field-invalid">Please enter a valid email id.</p>
 				</div>
 				
 				<div class="signup-field">
-					<input id="password" type="password" name="password" required="required" class="signup-input-field"
-					 placeholder="Password (6 or more characters)" ng-model="formValues.password" ng-minlength="5">
+					<input id="password" type="password" name="password" required class="signup-input-field" placeholder="Password (6 or more characters)"
+					 ng-model="formValues.password" ng-minlength="6">
+					<p ng-show="signupForm.password.$invalid" class="signup-input-field-invalid">Password needs to be at least 6 characters long.</p>
 				</div>
 
 				<div class="policy-message">
@@ -64,10 +68,10 @@
 				</div>
 
 				<div>
-					<input type="submit" name="sign-up" value="Sign Up" class="sign-up-button">
+					<button type="submit" class="btn btn-primary sign-up-button" ng-disabled="signupForm.$invalid">Sign Up</button>
 				</div>
 			</form>
-			<div><p>{{formValues.firstName}}</p><p>{{formValues.lastName}}</p><p>{{formValues.email}}</p><p>{{formValues.password}}</p></div>
+			<!-- <div><p>{{formValues.firstName}}</p><p>{{formValues.lastName}}</p><p>{{formValues.email}}</p><p>{{formValues.password}}</p></div> -->
 		</fieldset>
 
 		<div class="main-about">

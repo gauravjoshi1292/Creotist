@@ -168,7 +168,9 @@ header {
 }
 
 .signup-input-field-invalid {
-	border: 1px solid red;
+	width: 200px;
+	height: 20px;
+	border: 1px solid green;
 }
 
 .name {
