@@ -39,14 +39,15 @@
 
 <div class="body">
 	<div class="body-content">
-		<fieldset class="signup-form" ng-controller="SignupCtrl" >
+		<fieldset class="signup-form" ng-controller="SignupCtrl">
 			<p class="signup-form-legend">New to creotist? Join today.</p>
 
 			<form name="signupForm" ng-submit="submitForm(signupForm.$valid)" novalidate>
+				<p class="signup-error-message" ng-show="signupForm.$invalid && formValues.submitted">The marked field(s) are invalid.</p>
+				
 				<div class="signup-field">
 					<input id="firstName" type="text" name="firstName" required class="signup-input-field name" placeholder="First name"
-					 ng-class="{'signup-input-field-invalid': signupForm.firstName.$invalid && formValues.submitted}" ng-model="formValues.firstName"
-					 >
+					 ng-class="{'signup-input-field-invalid': signupForm.firstName.$invalid && formValues.submitted}" ng-model="formValues.firstName">
 
 					<input id="lastName" type="text" name="lastName" required class="signup-input-field name" placeholder="Last name"
 					 ng-class="{'signup-input-field-invalid': signupForm.lastName.$invalid && formValues.submitted}" ng-model="lastName">
@@ -67,7 +68,7 @@
 				</div>
 
 				<div>
-					<button type="submit" class="btn btn-primary sign-up-button">Sign Up</button>
+					<button type="submit" class="sign-up-button">Sign Up</button>
 				</div>
 			</form>
 		</fieldset>
