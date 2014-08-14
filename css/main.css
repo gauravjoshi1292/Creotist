@@ -101,7 +101,7 @@ header {
 	text-decoration: none;
 }
 
-.login-button {
+.login-list .login-list-element .btn-primary {
 	width: 60px;
 	height: 24px;
 	position: relative;
@@ -111,17 +111,18 @@ header {
 	color: white;
 	font-size: 12px;
 	border: 1px solid #006064;
+	padding: 0;
 }
 
-.login-button:visited{
+.login-list .login-list-element .btn-primary:visited{
 	background-color: #006064;
 }
 
-.login-button:hover{
+.login-list .login-list-element .btn-primary:hover{
 	background-color: #006064;
 }
 
-.login-button:active{
+.login-list .login-list-element .btn-primary:active{
 	background-color: #006064;
 }
 
@@ -145,6 +146,7 @@ header {
 }
 
 .signup-form-legend {
+	padding-bottom: 10px;
 	font-size: 24px;
 	color: #607d8b;
 }
@@ -172,11 +174,15 @@ header {
 }
 
 .signup-error-message {
-	/*width: 400px;*/
-	/*height: 25px;*/
-	/*text-align: center;*/
-	/*background-color: #e51c23;*/
-	color: #e51c23;
+	width: 400px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #e51c23;
+	border: 1px solid #e51c23;
+	border-radius: 4px;
+	padding-top: 3px;
+	color: white;
 	font-size: 14px;
 }
 
