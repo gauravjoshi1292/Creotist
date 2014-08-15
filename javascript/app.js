@@ -21,14 +21,44 @@ app.directive('ngBlur', ['$parse', function($parse) {
   }
 }]);
 
-app.controller("LoginCtrl", function($scope){
+app.controller("LoginCtrl", function($scope, $http){
 	$scope.formValues = {};
+	$scope.submitForm = function(){
+		$http.get("../json/userData.json").then(function(data){
+			$scope.userData = data.data;
+			console.log(data);
+			console.log($scope.userData);
+		});
+	}
 });
 
-app.controller('SignupCtrl', function($scope){
-	$scope.formValues = {};
-	$scope.formValues.submitted = false;
+app.controller('SignupCtrl', function($scope, $http){
+	$scope.newUser = {};
+	$scope.form = {};
+	$scope.form.submitted = false;
 	$scope.submitForm = function(isValid){
-		$scope.formValues.submitted = true;
+		$scope.form.submitted = true;
+
+		if(isValid){
+			var userData;
+			$http.get("../json/userData.json").then(function(data){
+				console.log(data);
+				if(data.data){
+					userData = data;
+				}
+				else{
+					userData = [];
+				}
+				userData.push($scope.newUser);
+				console.log(userData);
+			});
+
+			$http.post("../json/userData.json", userData).then(function(data){
+				console.log('post', data);
+			});
+		}
+		else {
+			console.log("invalid data")
+		}
 	}
 });
